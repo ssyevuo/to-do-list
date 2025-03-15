@@ -1,0 +1,124 @@
+:root{
+    --mist-dusk-100: #243E61;
+    --mist-dusk-200: #456080;
+    --mist-dusk-300: #6C87A8;
+    --mist-dusk-400: #99A7B5;
+    --mist-dusk-500: #BDBDBD;
+}
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    color: var(--mist-dusk-500);
+    background: linear-gradient(45deg, oklab(36.1% -0.016 -0.067), oklab(48.1% -0.018 -0.059), oklab(61.5% -0.017 -0.057), oklab(72.2% -0.01 -0.024), oklab(79.8% 0 0))
+}
+
+.container {
+    width: 400px;
+    margin: 50px;
+    padding: 20px;
+    background-color: var(--mist-dusk-100);
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.input-container {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.input-container input {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--mist-dusk-200);
+    color: var(--mist-dusk-500);
+}
+
+.input-container button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--mist-dusk-300);
+    color: var(--mist-dusk-500);
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.task-list h2 {
+    margin-bottom: 10px;
+}
+
+.todo-items, .completed-items {
+    list-style: none;
+    padding: 0;
+}
+
+.todo-items li, .completed-items li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.task-content {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--mist-dusk-400);
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.checkbox.completed {
+    background-color: var(--mist-dusk-200);
+    border: 2px solid var(--mist-dusk-200);
+    position: relative;
+}
+
+.checkbox.completed::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.due-date {
+    font-size: 0.8em;
+    color: #A0A0A0;
+}
+
+h1, h2, h3, p, span, li {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        margin: 20px auto;
+    }
+}

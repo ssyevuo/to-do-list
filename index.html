@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Head contents -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>To-Do List</title>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <div class="menu-icon"></div>
+                <div class="title">To-Do List</div>
+                <div class="star-icon"></div>
+            </header>
+            <!--Container for the various inputs-->
+            <div class="input-container">
+                <input type="text" id="taskInput" placeholder="Add Item...">
+                <button id="addTaskButton">+</button>
+            </div>            
+            <!-- list of the tasks will appear here-->
+             <div class="task-list">
+                <div class="todo-section">
+                    <h2>TO DO</h2>
+                    <ul class="todo-items">
+                        <li>
+                            <div class="task-content">
+                                <div class="checkbox"></div>
+                                <div class="task-text">Pick up mail</div>
+                            </div>
+                            <div class="due-date">Due today</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="completed-section">
+                    <h2>COMPLETED</h2>
+                    <ul class="completed-items">
+                        <li>
+                            <div class="task-content">
+                                <div class="checkbox completed"></div>
+                                <div class="task-text">Feed dog</div>
+                            </div>
+                            <div class="due-date">Due today</div>
+                        </li>
+                    </ul>
+                </div>
+             </div>
+        </div>
+    </body>
+</html>
